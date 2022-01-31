@@ -1,0 +1,11 @@
+import serial
+from serial import Serial
+import time
+
+ser = serial.Serial('COM3',115200)
+while True:
+    data = ser.readline(1000)
+    data = data.decode("utf-8")
+    list_data = list(data)
+    print(data[1])
+    time.sleep
